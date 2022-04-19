@@ -1,0 +1,7 @@
+register.register_form:
+  path: '/user/form/example-register'
+  defaults:
+    _form: 'Drupal\register\Form\RegisterForm'
+    _title: 'Example Registration Form'
+  requirements:
+    _permission: 'TRUE'

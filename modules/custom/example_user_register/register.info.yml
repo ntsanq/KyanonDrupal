@@ -1,0 +1,5 @@
+name: Kyanon Register Form
+description: A custom module for registering  a user
+type: module
+core: 8.x
+package: Custom

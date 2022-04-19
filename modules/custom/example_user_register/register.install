@@ -1,0 +1,38 @@
+<?php
+
+function register_schema() {
+	$schema['kyanon_register'] = [
+	'description' => 'This table is used to Kyanon register example.',
+		'fields' => [
+						  'id' => [
+							'type' => 'serial',
+							'not null' => TRUE,
+							 'unsigned' => TRUE,
+						   ],
+						  'name' => [
+						     'type' => 'varchar',
+						     'length' => '40',
+						     'not null' => TRUE,
+						  ],
+						  'phone' => [
+							'type' => 'varchar',
+							'length' => '12',
+							'not null' => TRUE,
+						  ],
+						  'mail' => [
+							'type' => 'varchar',
+							'length' => '40',
+							'not null' => TRUE,
+						  ],
+
+						  'age' => [
+							'type' => 'char',
+							'length' => '5',
+							'not null' => TRUE,
+						  ],
+			  
+			  		],
+		'primary key' => ['id'],
+	];
+	return $schema;
+}
