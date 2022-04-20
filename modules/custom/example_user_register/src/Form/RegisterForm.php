@@ -76,7 +76,7 @@ class RegisterForm extends FormBase {
     }
 
     if ($form_state->getValue('age') == '10-17'){
-      $form_state->setErrorByName('age', $this->t('Your age is under 18, go tell your mom to get registration for you'));
+      $form_state->setErrorByName('age', $this->t('Your age is under 18, go tell your mom to get registration for you!'));
     }
   } 
 
