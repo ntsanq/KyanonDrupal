@@ -51,6 +51,7 @@ class RegisterForm extends FormBase {
 
 
   public function validateForm(array &$form, FormStateInterface $form_state) {
+    
     $pattern = '/(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})/';
     $subject = $form_state->getValue('name');
     if(!preg_match($pattern, $subject, $matches)) {
@@ -67,8 +68,6 @@ class RegisterForm extends FormBase {
     $subject = $form_state->getValue('mail');
     if (!preg_match($pattern, $subject, $matches)){
         $form_state->setErrorByName('mail', $this->t('Your mail must in @kyanon.digital'));
-    }
-    
     }
   }
 
@@ -88,4 +87,5 @@ public function submitForm(array &$form, FormStateInterface $form_state) {
    \Drupal::messenger()->addMessage($key . ': ' . $value);
  }
 }
+
 }
