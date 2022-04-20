@@ -87,26 +87,28 @@ class RegisterForm extends FormBase {
     $phone = $field['phone'];
     $mail = $field['mail'];
     $age = $field['age'];
+    $descript = $field['descript'];
 
     $field = [
       'name'   => $name,
       'phone'   => $phone,
       'mail'   => $mail,
       'age'   => $age,
+      'descript'   => $descript,
     ];
     
-    // $query = db_insert('kyanon_register')
-    //   ->fields($field)
-    //   ->execute();
+    $query = db_insert('kyanon_register')
+      ->fields($field)
+      ->execute();
 
-    // drupal_set_message("Your infomation are succesfully created");
+    drupal_set_message("Your infomation are succesfully created");
 
    //  $form_state->setRedirect('register.register_form');
 
-    \Drupal::messenger()->addMessage(t("Registration Done!! Registered Values are:"));
-    foreach ($form_state->getValues() as $key => $value) {
-     \Drupal::messenger()->addMessage($key . ': ' . $value);
-    }
+    // \Drupal::messenger()->addMessage(t("Registration Done!! Registered Values are:"));
+    // foreach ($form_state->getValues() as $key => $value) {
+    //  \Drupal::messenger()->addMessage($key . ': ' . $value);
+    // }
  }
 
 }

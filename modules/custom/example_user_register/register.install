@@ -7,7 +7,7 @@ function register_schema() {
 						  'id' => [
 							'type' => 'serial',
 							'not null' => TRUE,
-							 'unsigned' => TRUE,
+							'unsigned' => TRUE,
 						   ],
 						  'name' => [
 						     'type' => 'varchar',
@@ -22,13 +22,15 @@ function register_schema() {
 						  'mail' => [
 							'type' => 'varchar',
 							'length' => '40',
-							'not null' => TRUE,
 						  ],
 
 						  'age' => [
 							'type' => 'char',
 							'length' => '5',
-							'not null' => TRUE,
+						  ],
+
+						  'descript' => [
+							'type' => 'text',
 						  ],
 			  
 			  		],
